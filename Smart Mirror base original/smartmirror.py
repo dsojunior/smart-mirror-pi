@@ -300,6 +300,7 @@ class FullscreenWindow:
         self.topFrame.pack(side = TOP, fill=BOTH, expand = YES)
         self.bottomFrame.pack(side = BOTTOM, fill=BOTH, expand = YES)
         self.state = False
+        self.tk.attributes("-fullscreen", True)
         self.tk.bind("<Return>", self.toggle_fullscreen)
         self.tk.bind("<Escape>", self.end_fullscreen)
         # clock
